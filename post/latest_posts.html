@@ -1,0 +1,14 @@
+<ul>
+    {% for post in latest_posts %}
+    <li>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
